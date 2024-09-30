@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather Sans", Times, serif;
+}
+
+body {
+  background-color: #eaecef;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.app {
+  font-family: "Poppins", sans-serif;
+  width: min(95vw, 31.25em);
+  margin: auto;
+  /* padding-top: 1.875em; */
+}
+
+.container {
+  /* padding-top: 5px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 50vh; */
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+
+#tasks {
+  width: 100%;
+  padding: 5px;
+  /* margin-bottom: 30px; */
+}
+
+.input-text {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  margin-right: 10px;
+}
+
+/* .add-task {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+} */
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+#add-btn {
+  background-color: #343a40;
+  color: white;
+  border: none;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+#add-btn:hover {
+  background-color: #495057;
+}
+
+.pending-tasks {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.task {
+  background-color: #f8f9fa;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task .taskname {
+  font-size: 1em;
+  margin-left: 10px;
+  flex: 1;
+  color: #343a40;
+}
+
+.task .edit,
+.task .delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-left: 10px;
+  color: #6c757d;
+}
+
+.task .edit:hover {
+  color: #007bff;
+}
+
+.task .delete:hover {
+  color: #dc3545;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+#error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 10px;
+  display: none;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .input-text {
+    width: 80%;
+  }
+
+  #tasks {
+    width: 90%;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .task {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
